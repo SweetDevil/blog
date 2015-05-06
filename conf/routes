@@ -1,0 +1,13 @@
+GET     /                                       App.Index
+GET     /favicon.ico                            404
+
+
+GET     /public/*filepath                       Static.Serve("public")
+
+
+#admin module article controller
+* /admin/article									ArticleAdmin.Index
+* /admin/article/index								ArticleAdmin.Index
+* /admin/article/add								ArticleAdmin.Add
+* /admin/article/edit								ArticleAdmin.Edit
+* /admin/article/del								ArticleAdmin.Del

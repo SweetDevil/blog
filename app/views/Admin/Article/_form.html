@@ -1,0 +1,57 @@
+{{template "Admin/layout_header.html" .}}
+
+<table width="80%" class="table">
+	<form method="post" enctype="multipart/form-data">
+		<tr>
+			<th width="20%"></th>
+			<th width="70%"></th>
+		</tr>
+		<tr>
+			<td>{{msg . "title"}}</td>
+			<td><input type="text" name="Article[title]"></td>
+		</tr>
+		<tr>
+			<td>{{msg . "articleType"}}</td>
+			<td>
+				<select name="Article[type]">
+					<option value="1">{{msg . "normalArticle"}}</option>
+					<option value="2">{{msg . "galleryArticle"}}</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>{{msg . "categoryBelongsTo"}}</td>
+			<td>
+				<select name="Article[catid]">
+					<option value="0">{{msg . "default"}}</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>{{msg . "thumbImage"}}</td>
+			<td><input type="file" name="Article[thumb]"></td>
+		</tr>
+		<tr>
+			<td>{{msg . "content"}}</td>
+			<td>
+				<textarea id="editor" name="Article[content]" style="width:800px;min-height:280px;">aaaaaaaaaaaaaaaaa</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input class="btn" type="submit" value="{{msg . `submit`}}"></td>
+		</tr>
+	<form>
+<table>
+
+
+<script type="text/javascript" charset="utf-8" src="/public/js/lib/ckeditor/ckeditor.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/public/js/lib/ckeditor/config.js"></script>
+<script type="text/javascript">
+ CKEDITOR.replace( 'editor' );
+</script>
+
+
+
+
+{{template "Admin/layout_footer.html" .}}

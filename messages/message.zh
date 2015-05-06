@@ -1,0 +1,10 @@
+webSiteAdmin = 网站后台管理
+title = 标题
+normalArticle = 普通文章
+galleryArticle = 幻灯片文章
+articleType = 文章类型
+default = 默认
+categoryBelongsTo = 所属栏目
+thumbImage = 缩略图
+content = 内容
+submit = 提交
