@@ -8,12 +8,12 @@
 		</tr>
 		<tr>
 			<td>{{msg . "title"}}</td>
-			<td><input type="text" name="Article[title]"></td>
+			<td><input type="text" name="article_title"></td>
 		</tr>
 		<tr>
 			<td>{{msg . "articleType"}}</td>
 			<td>
-				<select name="Article[type]">
+				<select name="article_type">
 					<option value="1">{{msg . "normalArticle"}}</option>
 					<option value="2">{{msg . "galleryArticle"}}</option>
 				</select>
@@ -22,19 +22,22 @@
 		<tr>
 			<td>{{msg . "categoryBelongsTo"}}</td>
 			<td>
-				<select name="Article[catid]">
+				<select name="article_catid">
 					<option value="0">{{msg . "default"}}</option>
+					{{range $k,$v := .category}}
+						<option value="{{$v.Id}}">{{$v.Name}}</option>
+					{{end}}
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>{{msg . "thumbImage"}}</td>
-			<td><input type="file" name="Article[thumb]"></td>
+			<td><input type="file" name="article_thumb"></td>
 		</tr>
 		<tr>
 			<td>{{msg . "content"}}</td>
 			<td>
-				<textarea id="editor" name="Article[content]" style="width:800px;min-height:280px;">aaaaaaaaaaaaaaaaa</textarea>
+				<textarea id="editor" name="article_content" style="width:800px;min-height:280px;">aaaaaaaaaaaaaaaaa</textarea>
 			</td>
 		</tr>
 		<tr>
