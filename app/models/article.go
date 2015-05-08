@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/SweetDevil/blog/tplfunc"
+	"github.com/SweetDevil/blog/app/tplfunc"
 	"mime/multipart"
 	"net/url"
 )

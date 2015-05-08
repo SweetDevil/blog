@@ -1,4 +1,8 @@
 # blog
+
+repo moved to github.com/hakur/blog
+
+
 golang personal blog based on revel framework, Every Thing is Experimental
 
 Set up.

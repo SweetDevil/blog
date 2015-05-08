@@ -37,7 +37,7 @@ func (c ArticleAdmin) Add() revel.Result {
 		//clear form
 		c.Request.MultipartForm.RemoveAll()
 	}
-	c.RenderArgs["abc"] = 12
+	c.RenderArgs["pageTitle"] = ""
 	c.RenderArgs["category"] = models.CategoryModel.List()
 	return c.RenderTemplate("Admin/Article/_form.html")
 }
